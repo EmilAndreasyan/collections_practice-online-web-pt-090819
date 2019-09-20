@@ -50,6 +50,12 @@ end
 sum_array([3, 8, 1, 15, 7])
 
 def add_s(arr)
-arr[2,3].each_with_index.collect {|element, index| element + "s"}
+arr.each_with_index.collect do |element, index|
+if index == 1
+element
+else
+element + "s"
 end
-add_s(["blake", "feet", "ashley", "scott"])
+end
+end
+add_s(["hand", "feet", "knee", "table"])
